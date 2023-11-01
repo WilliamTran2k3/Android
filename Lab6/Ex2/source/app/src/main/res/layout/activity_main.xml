@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Nội dung ở đây"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnReadInternal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:background="#8C8C8C"
+        android:backgroundTint="#989898"
+        android:text="Đọc Internal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtContent" />
+
+    <Button
+        android:id="@+id/btnReadExternal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="#DC9696"
+        android:text="Đọc External"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnReadInternal" />
+
+    <Button
+        android:id="@+id/btnWriteInternal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#A38A8A"
+        android:text="Ghi Internal"
+        app:layout_constraintStart_toStartOf="@+id/btnReadInternal"
+        app:layout_constraintTop_toBottomOf="@+id/btnReadInternal" />
+
+    <Button
+        android:id="@+id/btnWriteExternal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#C59191"
+        android:text="Ghi External"
+        app:layout_constraintEnd_toEndOf="@+id/btnReadExternal"
+        app:layout_constraintTop_toBottomOf="@+id/btnReadExternal" />
+</androidx.constraintlayout.widget.ConstraintLayout>
