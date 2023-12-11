@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.fragment_map);
         assert mapFragment != null;
         mapFragment.getMapAsync(callback);
 
@@ -78,8 +79,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(@NonNull GoogleMap map) {
         googleMap = map;
 
-        LatLng sydney = new LatLng(-34, 151);
-        googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng hanoi = new LatLng(21.0285, 105.8542); // Tọa độ của Hanoi, Việt Nam
+        googleMap.addMarker(new MarkerOptions().position(hanoi).title("Marker in Hanoi"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(hanoi));
     }
 }
